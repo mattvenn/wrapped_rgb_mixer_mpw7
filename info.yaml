@@ -44,5 +44,5 @@ source:
 final:
   directory: "final"
   gds_filename: "gds/wrapped_rgb_mixer.gds"
-  lvs_filename: "gl/wrapped_rgb_mixer.v"
+  lvs_filename: "verilog/gl/wrapped_rgb_mixer.v"
   lef_filename: "lef/wrapped_rgb_mixer.lef"
