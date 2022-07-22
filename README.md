@@ -1,17 +1,10 @@
 ![](../../workflows/multi_tool/badge.svg)
 
-# Information about your project
+# Wrapped RGB Mixer
 
-This is a template project you can clone and use to take part in the multi project submission to the
-Google/Efabless/Skywater shuttle.
+Demo project for the course.
 
-The tools that will test and create the aggregated design are here: https://github.com/mattvenn/multi_project_tools
-
-# Project info.yaml
-
-You need to fill in the fields of [info.yaml](info.yaml)
-
-See [here for more information](https://github.com/mattvenn/multi_project_tools/blob/main/docs/project_spec.md)
+![gds](docs/rgb_mixer_gds.png)
 
 # Zero to ASIC Course
 
