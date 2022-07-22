@@ -19,6 +19,8 @@
 #include <defs.h>
 #include <stub.c>
 
+#define PROJECT_ID 0
+
 /*
 	IO Test:
 		- Configures MPRJ lower 8-IO pins as outputs
@@ -79,12 +81,17 @@ void main()
 	reg_mprj_xfer = 1;
 	while (reg_mprj_xfer == 1);
 
+    // activate the project with 1st bank of the LA
+    reg_la0_iena = 0; // input disabled
+    reg_la0_oenb = 0xffffffff; // all outputs enabled
+    reg_la0_data = 1 << PROJECT_ID;
+
     // reset the design with LA
-    reg_la0_oenb = 1; // enable
-    reg_la0_iena = 0;
+    reg_la1_oenb = 1; // enable
+    reg_la1_iena = 0;
     // reset
-    reg_la0_data = 1;
-    reg_la0_data = 0;
+    reg_la1_data = 1;
+    reg_la1_data = 0;
 
     // do nothing
 
