@@ -8,7 +8,7 @@ clocks_per_phase = 10
 @cocotb.test()
 async def test_start(dut):
     clock = Clock(dut.clock, 25, units="ns") # 40M
-    cocotb.fork(clock.start())
+    cocotb.start_soon(clock.start())
     
     dut.RSTB <= 0
     dut.power1 <= 0;
@@ -48,7 +48,7 @@ async def test_all(dut):
     encoder1 = Encoder(dut.clock, dut.enc1_a, dut.enc1_b, clocks_per_phase = clocks_per_phase, noise_cycles = clocks_per_phase / 4)
     encoder2 = Encoder(dut.clock, dut.enc2_a, dut.enc2_b, clocks_per_phase = clocks_per_phase, noise_cycles = clocks_per_phase / 4)
 
-    cocotb.fork(clock.start())
+    cocotb.start_soon(clock.start())
 
     # pwm should all be low at start
     assert dut.pwm0_out == 0
