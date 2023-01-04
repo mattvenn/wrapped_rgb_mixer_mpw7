@@ -1,14 +1,13 @@
 {
-    "DESIGN_NAME": "project name",
+    "DESIGN_NAME": "wrapped_rgb_mixer",
     "RUN_KLAYOUT_XOR": "0",
     "RUN_KLAYOUT_DRC": "0",
     "PL_RESIZER_BUFFER_OUTPUT_PORTS": "0",
     "VERILOG_FILES": [ "dir::wrapper.v",
-        "dir::other source files.v",
-        "dir::other source files.v"
+        "dir::rgb_mixer/src/*.v"
             ],
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 180 210",
+    "DIE_AREA": "0 0 250 250",
     "PL_TARGET_DENSITY": "0.4",
     "SYNTH_DEFINES": "MPRJ_IO_PADS=38",
     "CLOCK_PERIOD": "10",
